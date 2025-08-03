@@ -5,8 +5,9 @@
 #include "Editor_Window.h"
 #include "../Ryudar_SOURCE/rApplication.h"
 
-#pragma comment(lib, "../x64/Debug/Ryudar_Window.lib")
-Application ap;
+Ryu::Application application;
+
+
 #define MAX_LOADSTRING 100
 
 // 전역 변수:
@@ -29,7 +30,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,         // 프로그램의 인�
     UNREFERENCED_PARAMETER(lpCmdLine);
 
     // TODO: 여기에 코드를 입력합니다.
-    ap.Test();
     // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
     LoadStringW(hInstance, IDC_EDITORWINDOW, szWindowClass, MAX_LOADSTRING);
@@ -64,7 +64,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,         // 프로그램의 인�
         /***게임로직**/
         else
         {
-
+            application.Run();
         }
     }
 
@@ -128,6 +128,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    {
       return FALSE;
    }
+
+   application.Initialize(hWnd);
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
