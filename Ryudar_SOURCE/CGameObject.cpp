@@ -1,38 +1,48 @@
 #include "CGameObject.h"
 
-Ryu::CGameObject::CGameObject()
+namespace Ryu
 {
-}
-
-Ryu::CGameObject::~CGameObject()
-{
-}
-
-void Ryu::CGameObject::Update()
-{
-	if (GetAsyncKeyState(VK_LEFT) & 0x8000)
+	CGameObject::CGameObject()
+		: m_X(0.f)
+		, m_Y(0.f)
 	{
-		m_X -= 0.01f;
 	}
-	if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
-	{
-		m_X += 0.01f;
-	}
-	if (GetAsyncKeyState(VK_UP) & 0x8000)
-	{
-		m_Y -= 0.01f;
-	}
-	if (GetAsyncKeyState(VK_DOWN) & 0x8000)
-	{
-		m_Y += 0.01f;
-	}
-}
 
-void Ryu::CGameObject::LateUpdate()
-{
-}
+	CGameObject::~CGameObject()
+	{
+	}
 
-void Ryu::CGameObject::Render(HDC _hdc)
-{
-	Rectangle(_hdc, m_X + 500, m_Y + 500, m_X + 600, m_Y + 600);
+	void CGameObject::Initialize()
+	{
+
+	}
+
+	void CGameObject::Update()
+	{
+		if (GetAsyncKeyState(VK_LEFT) & 0x8000)
+		{
+			m_X -= 0.01f;
+		}
+		if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
+		{
+			m_X += 0.01f;
+		}
+		if (GetAsyncKeyState(VK_UP) & 0x8000)
+		{
+			m_Y -= 0.01f;
+		}
+		if (GetAsyncKeyState(VK_DOWN) & 0x8000)
+		{
+			m_Y += 0.01f;
+		}
+	}
+
+	void CGameObject::LateUpdate()
+	{
+	}
+
+	void CGameObject::Render(HDC _hdc)
+	{
+		Rectangle(_hdc, m_X + 500, m_Y + 500, m_X + 600, m_Y + 600);
+	}
 }

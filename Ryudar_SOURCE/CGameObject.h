@@ -11,6 +11,7 @@ namespace Ryu
 		~CGameObject();
 
 	public:
+		void Initialize();
 		void Update();
 		void LateUpdate();
 		void Render(HDC _hdc);
