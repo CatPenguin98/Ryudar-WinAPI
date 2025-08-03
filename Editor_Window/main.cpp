@@ -113,12 +113,15 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
    hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
 
+   const UINT width = 1600;
+   const UINT height = 900;
+
    HWND hWnd = CreateWindowW(
        szWindowClass, 
        szTitle,                 //  윈도우 이름.
        WS_OVERLAPPEDWINDOW,     // 윈도우 스타일. 
        CW_USEDEFAULT, 0,        // 윈도우의 화면상 시작 위치.
-       CW_USEDEFAULT, 0,        // 윈도우 크기.
+       width, height,        // 윈도우 크기.
        nullptr, 
        nullptr, 
        hInstance, 
@@ -129,7 +132,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
       return FALSE;
    }
 
-   application.Initialize(hWnd);
+   application.Initialize(hWnd, width, height);
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);

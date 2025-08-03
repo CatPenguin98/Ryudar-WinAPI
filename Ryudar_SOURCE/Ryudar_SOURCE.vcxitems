@@ -17,11 +17,13 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CInputManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CTimeManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)rApplication.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)CGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CInputManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CTimeManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)rApplication.cpp" />
   </ItemGroup>
 </Project>

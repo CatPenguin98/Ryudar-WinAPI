@@ -1,5 +1,6 @@
 #include "CGameObject.h"
 #include "CInputManager.h"
+#include "CTimeManager.h"
 
 namespace Ryu
 {
@@ -20,21 +21,23 @@ namespace Ryu
 
 	void CGameObject::Update()
 	{
+		const float speed = 500.f;
+
 		if (CInputManager::Get_KeyPressed(ecKeyCode::A))
 		{
-			m_X -= 0.01f;
+			m_X -= speed * CTimeManager::Get_DeltaTime();
 		}
 		if (CInputManager::Get_KeyPressed(ecKeyCode::D))
 		{
-			m_X += 0.01f;
+			m_X += speed * CTimeManager::Get_DeltaTime();
 		}
 		if (CInputManager::Get_KeyPressed(ecKeyCode::W))
 		{
-			m_Y -= 0.01f;
+			m_Y -= speed * CTimeManager::Get_DeltaTime();
 		}
 		if (CInputManager::Get_KeyPressed(ecKeyCode::S))
 		{
-			m_Y += 0.01f;
+			m_Y += speed * CTimeManager::Get_DeltaTime();
 		}
 	}
 
