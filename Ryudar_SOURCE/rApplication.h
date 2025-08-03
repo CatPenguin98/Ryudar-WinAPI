@@ -19,8 +19,16 @@ namespace Ryu{
 		void			Render();
 
 	private:
-		HWND			m_Hwnd;
-		HDC				m_Hdc;
+		void			Clear_RenderTarget();
+		void			Copy_RenderTarget(HDC _dest, HDC _source);
+		void			Adjust_WindowRect(HWND _hwnd, UINT _width, UINT _height);
+		void			Create_Buffer(UINT _widht, UINT _height);
+		void			Initialize_Etc();
+
+	private:
+		HWND						m_Hwnd;			// 출력할 DC
+		HDC							m_Hdc;			// 출력할 도화지
+		#pragma region 더블 버퍼링 꼼수(?)
 		/*더블 버퍼링 꼼수(?)
 		* 원래는 도화지(BITMAP)만 두장 준비하고
 		* 한장 그리고 한장 출력하고 다시 교체하고의 반복이지만,
@@ -31,13 +39,14 @@ namespace Ryu{
 		* 다시 이를 원본_DC에 그대로 옮긴다.
 		* 메모리적으로는 사용량이 증가하지만, 연산량은 감소한다.
 		*/
-		HDC				m_BackHdc;
-		HBITMAP			m_BackBuffer;	// 그림그릴 도화지
+		#pragma endregion
+		HDC							m_BackHdc;		// 그림그릴 DC
+		HBITMAP						m_BackBuffer;	// 그림그릴 도화지
 
-		UINT			m_Width;
-		UINT			m_Height;
+		UINT						m_Width;
+		UINT						m_Height;
 		
-		CGameObject		m_Player;
+		
 	};
 }
 

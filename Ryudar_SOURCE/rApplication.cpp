@@ -1,6 +1,7 @@
 #include "rApplication.h"
 #include "CInputManager.h"
 #include "CTimeManager.h"
+#include "CSceneManager.h"
 
 namespace Ryu
 {
@@ -25,38 +26,18 @@ namespace Ryu
 		m_Hdc = GetDC(m_Hwnd);
 
 		/*화면 초기화*/
-		m_Width = _width;
-		m_Height = _height;
-		RECT rect{0, 0, m_Width , m_Height };
-		AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, false);
-		SetWindowPos(
-			m_Hwnd,
-			nullptr,
-			0, 0,
-			rect.right - rect.left,
-			rect.bottom - rect.top,
-			0);
-		ShowWindow(m_Hwnd, true);
+		Adjust_WindowRect(_hwnd, _width, _height);
 
 		/*비트맵생성*/
-		//윈도우 해상도에 맞는 백버퍼 생성
-		m_BackBuffer = CreateCompatibleBitmap(
-			m_Hdc,
-			m_Width,
-			m_Height);
-		// 백버퍼를 가지고 있을 백DC를 생성
-		m_BackHdc = CreateCompatibleDC(m_Hdc);
-		//백DC에 백버퍼를 연결
-		HBITMAP oldBMP = (HBITMAP)SelectObject(m_BackHdc, m_BackBuffer);
-		DeleteObject(oldBMP);
+		Create_Buffer(_width, _height);
 
 		/*컴포넌트 초기화*/
 		CInputManager::Initialize();
 		CTimeManager::Initialize();
 
-		/*오브젝트 초기화*/
-		m_Player.Initialize();
-		m_Player.Set_Position(0.f, 0.f);
+		/*씬 생성 초기화*/
+		CSceneManager::Initialize();
+
 	}
 
 	void Application::Run()
@@ -70,30 +51,83 @@ namespace Ryu
 	{
 		CTimeManager::Update();
 		CInputManager::Update();
-		m_Player.Update();
+		
+		/*씬 업데이트*/
+		CSceneManager::Update();
 	}
 
 	void Application::LateUpdate()
 	{
+		/*씬 업데이트*/
+		CSceneManager::LateUpdate();
 	}
 
 	void Application::Render()
 	{
-		Rectangle(m_BackHdc, 0, 0, 1600, 900);
+		Clear_RenderTarget();
 
 		/*시간 & 프레임 표시*/
 		CTimeManager::Render(m_BackHdc);
 
-		m_Player.Render(m_BackHdc);
+		/*씬 렌더링*/
+		CSceneManager::Render(m_BackHdc);
 
 		/*화면에 출력시킬 원본DC에 복사*/
+		Copy_RenderTarget(m_Hdc, m_BackHdc);
+	}
+
+	void Application::Clear_RenderTarget()
+	{
+		Rectangle(m_BackHdc, -1, -1, 1601, 901);
+	}
+
+	void Application::Copy_RenderTarget(HDC _dest, HDC _source)
+	{
+		/*화면에 출력시킬 원본DC에 복사*/
 		BitBlt(
-			m_Hdc,
+			_dest,
 			0, 0,
 			m_Width,
 			m_Height,
-			m_BackHdc,
+			_source,
 			0, 0,
 			SRCCOPY);
+	}
+
+	void Application::Adjust_WindowRect(HWND _hwnd, UINT _width, UINT _height)
+	{
+		RECT rect{ 0, 0, _width , _height };
+		AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, false);
+
+		m_Width = rect.right - rect.left;
+		m_Height = rect.bottom - rect.top;
+
+		SetWindowPos(
+			m_Hwnd,
+			nullptr,
+			0, 0,
+			m_Width, m_Height,
+			0);
+		ShowWindow(m_Hwnd, true);
+	}
+
+	void Application::Create_Buffer(UINT _widht, UINT _height)
+	{
+		//윈도우 해상도에 맞는 백버퍼 생성
+		m_BackBuffer = CreateCompatibleBitmap(
+			m_Hdc,
+			_widht,
+			_height);
+
+		// 백버퍼를 가지고 있을 백DC를 생성
+		m_BackHdc = CreateCompatibleDC(m_Hdc);
+
+		//백DC에 백버퍼를 연결
+		HBITMAP oldBMP = (HBITMAP)SelectObject(m_BackHdc, m_BackBuffer);
+		DeleteObject(oldBMP);
+	}
+
+	void Application::Initialize_Etc()
+	{
 	}
 }

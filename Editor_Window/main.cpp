@@ -4,6 +4,7 @@
 #include "framework.h"
 #include "Editor_Window.h"
 #include "../Ryudar_SOURCE/rApplication.h"
+#include "../Ryudar_Window/LoadScenes.h"
 
 Ryu::Application application;
 
@@ -136,6 +137,9 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
+
+   /*씬 로드*/
+   Ryu::LoadScenes();
 
    return TRUE;
 }
