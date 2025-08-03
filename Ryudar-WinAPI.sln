@@ -43,5 +43,6 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Ryudar_SOURCE\Ryudar_SOURCE.vcxitems*{242d453d-6a6f-4929-a1e5-1d70980f1534}*SharedItemsImports = 9
 		Ryudar_SOURCE\Ryudar_SOURCE.vcxitems*{27b84412-ff38-4345-b58c-654f9cd80646}*SharedItemsImports = 4
+		Ryudar_SOURCE\Ryudar_SOURCE.vcxitems*{f0738472-ec4e-4000-8331-0d699239a14f}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal
