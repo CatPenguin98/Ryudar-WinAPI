@@ -1,4 +1,5 @@
 #include "rApplication.h"
+#include "CInputManager.h"
 
 namespace Ryu
 {
@@ -17,6 +18,8 @@ namespace Ryu
 		m_Hwnd = _hwnd;
 		m_Hdc = GetDC(m_Hwnd);
 
+		CInputManager::Initialize();
+
 		m_Player.Initialize();
 		m_Player.Set_Position(0.f, 0.f);
 	}
@@ -30,6 +33,8 @@ namespace Ryu
 
 	void Application::Update()
 	{
+		CInputManager::Update();
+
 		m_Player.Update();
 	}
 

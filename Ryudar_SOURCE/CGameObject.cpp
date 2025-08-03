@@ -1,4 +1,5 @@
 #include "CGameObject.h"
+#include "CInputManager.h"
 
 namespace Ryu
 {
@@ -19,19 +20,19 @@ namespace Ryu
 
 	void CGameObject::Update()
 	{
-		if (GetAsyncKeyState(VK_LEFT) & 0x8000)
+		if (CInputManager::Get_KeyPressed(ecKeyCode::A))
 		{
 			m_X -= 0.01f;
 		}
-		if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
+		if (CInputManager::Get_KeyPressed(ecKeyCode::D))
 		{
 			m_X += 0.01f;
 		}
-		if (GetAsyncKeyState(VK_UP) & 0x8000)
+		if (CInputManager::Get_KeyPressed(ecKeyCode::W))
 		{
 			m_Y -= 0.01f;
 		}
-		if (GetAsyncKeyState(VK_DOWN) & 0x8000)
+		if (CInputManager::Get_KeyPressed(ecKeyCode::S))
 		{
 			m_Y += 0.01f;
 		}
