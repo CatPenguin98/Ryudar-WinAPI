@@ -5,6 +5,10 @@ VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_Window", "Editor_Window\Editor_Window.vcxproj", "{F0738472-EC4E-4000-8331-0D699239A14F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ryudar_Window", "Ryudar_Window\Ryudar_Window.vcxproj", "{27B84412-FF38-4345-B58C-654F9CD80646}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ryudar_SOURCE", "Ryudar_SOURCE\Ryudar_SOURCE.vcxitems", "{242D453D-6A6F-4929-A1E5-1D70980F1534}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,11 +25,23 @@ Global
 		{F0738472-EC4E-4000-8331-0D699239A14F}.Release|x64.Build.0 = Release|x64
 		{F0738472-EC4E-4000-8331-0D699239A14F}.Release|x86.ActiveCfg = Release|Win32
 		{F0738472-EC4E-4000-8331-0D699239A14F}.Release|x86.Build.0 = Release|Win32
+		{27B84412-FF38-4345-B58C-654F9CD80646}.Debug|x64.ActiveCfg = Debug|x64
+		{27B84412-FF38-4345-B58C-654F9CD80646}.Debug|x64.Build.0 = Debug|x64
+		{27B84412-FF38-4345-B58C-654F9CD80646}.Debug|x86.ActiveCfg = Debug|Win32
+		{27B84412-FF38-4345-B58C-654F9CD80646}.Debug|x86.Build.0 = Debug|Win32
+		{27B84412-FF38-4345-B58C-654F9CD80646}.Release|x64.ActiveCfg = Release|x64
+		{27B84412-FF38-4345-B58C-654F9CD80646}.Release|x64.Build.0 = Release|x64
+		{27B84412-FF38-4345-B58C-654F9CD80646}.Release|x86.ActiveCfg = Release|Win32
+		{27B84412-FF38-4345-B58C-654F9CD80646}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {82A84FEB-9BF5-4893-85F0-1F094ED3947D}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Ryudar_SOURCE\Ryudar_SOURCE.vcxitems*{242d453d-6a6f-4929-a1e5-1d70980f1534}*SharedItemsImports = 9
+		Ryudar_SOURCE\Ryudar_SOURCE.vcxitems*{27b84412-ff38-4345-b58c-654f9cd80646}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal
