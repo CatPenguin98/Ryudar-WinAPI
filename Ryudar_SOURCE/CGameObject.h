@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CommonInclude.h"
+#include "CComponent.h"
 
 namespace Ryu
 {
@@ -11,19 +12,39 @@ namespace Ryu
 		~CGameObject();
 
 	public:
-		void Initialize();
-		void Update();
-		void LateUpdate();
-		void Render(HDC _hdc);
+		virtual void			Initialize();
+		virtual void			Update();
+		virtual void			LateUpdate();
+		virtual void			Render(HDC _hdc);
+		virtual void			Release();
+
 	public:
-		void Set_Position(const float x, const float y) { m_X = x; m_Y = y; }
-		const float Get_PosiitonX() const { return m_X; }
-		const float Get_PositionY() const { return m_Y; }
+		template <typename T>
+		T* AddComponent()
+		{
+			T* pComp = new T;
+			pComp->SetOwner(this);
+			m_Components.push_back(pComp);
+
+			return pComp;
+		}
+
+		template <typename T>
+		T* GetComponent()
+		{
+			T* pComponent = nullptr;
+			for (CComponent* pComp : m_Components)
+			{
+				pComponent = dynamic_cast<T*>(pComp);
+				if (pComponent)
+					break;
+			}
+
+			return pComponent;
+		}
 
 	private:
-		/*게임 오브젝트 좌표*/
-		float m_X;
-		float m_Y;
+		std::vector<CComponent*> m_Components;
 	};
 }
 

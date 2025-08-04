@@ -13,10 +13,9 @@ namespace Ryu
 	
 	void CPlayScene::Initialize()
 	{
-		for(size_t i = 0; i < 2000; i++)
+		for(size_t i = 0; i < 1; i++)
 		{
 			CGameObject* obj = new CGameObject();
-			obj->Set_Position(rand() % 1600, rand() % 900);
 			Add_GameObject(obj);
 		}
 	}
