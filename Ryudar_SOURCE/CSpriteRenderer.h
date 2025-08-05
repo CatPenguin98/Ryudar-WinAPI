@@ -17,8 +17,13 @@ namespace Ryu
 		void		LateUpdate() override;
 		void		Render(HDC _hdc) override;
 
-	private:
+	public:
+		void		Image_Load(const std::wstring& path);
 
+	private:
+		Gdiplus::Image*		m_pImage;
+		UINT				m_iWidth;
+		UINT				m_iHeight;
 	};
 }
 

@@ -25,4 +25,3 @@ namespace Ryu
 		CGameObject*		m_pOwner;
 	};
 }
-

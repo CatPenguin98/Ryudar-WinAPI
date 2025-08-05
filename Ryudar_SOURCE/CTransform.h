@@ -3,11 +3,12 @@
 
 namespace Ryu
 {
-	struct Pos
-	{
-		int mX;
-		int mY;
-	};
+	//struct Pos
+	//{
+	//	int mX;
+	//	int mY;
+	//};
+	using namespace math;
 
 	class CTransform : public CComponent
 	{
@@ -22,16 +23,11 @@ namespace Ryu
 		void				Render(HDC hdc)  override;
 	
 	public:
-		void				SetPos(int x, int y) 
-		{ mX = x; mY = y; }
-		int					GetX() 
-		{ return mX; }
-		int					GetY() 
-		{ return mY; }
+		void Set_Position(Vector2 _vPos) { m_vPosition = _vPos; }
+		const Vector2 Get_Position() const { return m_vPosition; }
 
 	private:
-		int mX;
-		int mY;
+		Vector2 m_vPosition;
 	};
 }
 

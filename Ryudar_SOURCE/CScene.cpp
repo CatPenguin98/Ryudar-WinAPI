@@ -42,6 +42,7 @@ namespace Ryu
 			(*iter)->Render(_hdc);
 		}
 	}
+
 	void CScene::Add_GameObject(CGameObject* _gameObj)
 	{
 		m_GameObjects.push_back(_gameObj);

@@ -19,23 +19,29 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CInputManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CSpriteRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CTimeManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CTransform.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)rApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)RyuMath.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)CComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CInputManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CSpriteRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CTimeManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CTransform.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)rApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)RyuMath.cpp" />
   </ItemGroup>
 </Project>

@@ -31,7 +31,7 @@ namespace Ryu
 		/*비트맵생성*/
 		Create_Buffer(_width, _height);
 
-		/*컴포넌트 초기화*/
+		/*기타 초기화*/
 		CInputManager::Initialize();
 		CTimeManager::Initialize();
 

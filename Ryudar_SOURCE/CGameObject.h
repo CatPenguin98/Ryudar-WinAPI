@@ -23,7 +23,7 @@ namespace Ryu
 		T* AddComponent()
 		{
 			T* pComp = new T;
-			pComp->SetOwner(this);
+			pComp->Set_Owner(this);
 			m_Components.push_back(pComp);
 
 			return pComp;
