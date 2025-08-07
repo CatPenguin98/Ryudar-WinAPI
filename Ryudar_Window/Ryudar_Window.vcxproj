@@ -132,13 +132,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CBackGround.h" />
     <ClInclude Include="CPlayer.h" />
     <ClInclude Include="CPlayScene.h" />
     <ClInclude Include="LoadScenes.h" />
+    <ClInclude Include="Stage1.h" />
+    <ClInclude Include="Stage2.h" />
+    <ClInclude Include="Stage3.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CBackGround.cpp" />
     <ClCompile Include="CPlayer.cpp" />
     <ClCompile Include="CPlayScene.cpp" />
+    <ClCompile Include="Stage1.cpp" />
+    <ClCompile Include="Stage2.cpp" />
+    <ClCompile Include="Stage3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

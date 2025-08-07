@@ -18,12 +18,36 @@
     <ClInclude Include="CPlayScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="Stage1.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="CBackGround.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage2.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage3.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CPlayer.cpp">
       <Filter>Contents</Filter>
     </ClCompile>
     <ClCompile Include="CPlayScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage1.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="CBackGround.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage2.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage3.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
   </ItemGroup>

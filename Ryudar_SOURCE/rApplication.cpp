@@ -105,7 +105,7 @@ namespace Ryu
 		SetWindowPos(
 			m_Hwnd,
 			nullptr,
-			0, 0,
+			500, 300,
 			m_Width, m_Height,
 			0);
 		ShowWindow(m_Hwnd, true);
@@ -129,5 +129,6 @@ namespace Ryu
 
 	void Application::Initialize_Etc()
 	{
+
 	}
 }

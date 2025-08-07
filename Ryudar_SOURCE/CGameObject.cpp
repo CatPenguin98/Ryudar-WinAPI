@@ -44,7 +44,6 @@ namespace Ryu
 		{
 			comp->Render(_hdc);
 		}
-		//Rectangle(_hdc, m_X + 500, m_Y + 500, m_X + 600, m_Y + 600);
 	}
 
 	void CGameObject::Release()
