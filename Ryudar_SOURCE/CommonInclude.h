@@ -9,6 +9,7 @@
 
 
 #include "RyuMath.h"
+#include "Enums.h"
 
 #include <mmsystem.h>
 #include <dinput.h>

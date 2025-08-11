@@ -26,6 +26,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)CSpriteRenderer.cpp">
       <Filter>Component</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CLayer.cpp">
+      <Filter>Layer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CGameObject.h" />
@@ -56,6 +59,12 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CSpriteRenderer.h">
       <Filter>Component</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CLayer.h">
+      <Filter>Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Enums.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">
@@ -66,6 +75,9 @@
     </Filter>
     <Filter Include="Scene">
       <UniqueIdentifier>{1901da27-859b-42c6-8830-ee6debca5d31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer">
+      <UniqueIdentifier>{31ecb9a6-e507-4163-8a7f-63e6286e71d4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
