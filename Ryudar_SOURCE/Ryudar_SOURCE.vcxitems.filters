@@ -27,6 +27,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)CLayer.cpp">
       <Filter>Layer</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CResources.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CGameObject.h" />
@@ -61,6 +63,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Enums.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CResources.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">
