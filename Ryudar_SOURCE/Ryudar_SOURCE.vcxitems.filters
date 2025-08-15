@@ -17,14 +17,18 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)CSceneManager.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)CResource.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)CResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)RyuMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CTransform.cpp">
       <Filter>Component</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)CSpriteRenderer.cpp">
       <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CResources.cpp">
+      <Filter>Resource</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -45,8 +49,6 @@
       <Filter>Scene</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)RyuMath.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)CResource.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)CResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
       <Filter>Common</Filter>
     </ClInclude>
@@ -55,6 +57,12 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)CSpriteRenderer.h">
       <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CResources.h">
+      <Filter>Resource</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -66,6 +74,9 @@
     </Filter>
     <Filter Include="Scene">
       <UniqueIdentifier>{1901da27-859b-42c6-8830-ee6debca5d31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{8527f169-33bd-4c7b-bc60-585b98b892ac}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

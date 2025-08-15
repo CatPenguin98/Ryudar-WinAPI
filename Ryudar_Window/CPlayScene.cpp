@@ -24,7 +24,7 @@ namespace Ryu
 
 		CSpriteRenderer* sr = bg->AddComponent<CSpriteRenderer>();
 		sr->Set_Name(L"SR");
-		sr->Image_Load(L"C:\\Users\\Jo_\\source\\repos\\Ryudar-WinAPI\\Ryudar_Window\\CloudOcean.png");
+		sr->Image_Load(L"C:\\Users\\dydtj\\Desktop\\¡ÍΩ≈\\Ryudar-WinAPI\\Ryudar_Window\\CloudOcean.png");
 		CScene::Add_GameObject(bg);
 	}
 	
