@@ -1,5 +1,4 @@
 #include "CPlayScene.h"
-//#include "CGameObject.h"
 #include "CPlayer.h"
 #include "CTransform.h"
 #include "CSpriteRenderer.h"
@@ -52,6 +51,7 @@ namespace Ryu
 			CSceneManager::LoadScene(L"TitleMenu");
 		}
 	}
+
 	void CPlayScene::Render(HDC _hdc)
 	{
 		CScene::Render(_hdc);
