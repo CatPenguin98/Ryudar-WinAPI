@@ -8,7 +8,7 @@
 #include "CInputManager.h"
 #include "Stage1.h"
 #include "CSceneManager.h"
-
+/*Add Filter*/
 namespace Ryu
 {
 	CPlayScene::CPlayScene()
