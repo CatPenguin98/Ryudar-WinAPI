@@ -2,12 +2,13 @@
 #include "CPlayer.h"
 #include "CTransform.h"
 #include "CSpriteRenderer.h"
+#include "Object.h"
 
 /*씬전환 테스트*/
 #include "CInputManager.h"
 #include "Stage1.h"
 #include "CSceneManager.h"
-/*test*/
+
 namespace Ryu
 {
 	CPlayScene::CPlayScene()
@@ -23,16 +24,13 @@ namespace Ryu
 	void CPlayScene::Initialize()
 	{
 	#pragma region 배경생성
-		m_pPlayer = new CPlayer();
-		
-		CTransform* tr = m_pPlayer->AddComponent<CTransform>();
-		tr->Set_Position(Vector2(0, 0));
-		tr->Set_Name(L"TR");
-		
+		m_pPlayer = object::Instantiate<CPlayer>(
+			enums::ecLayerType::BackGround,
+			Vector2(100, 100));
+
 		CSpriteRenderer* sr = m_pPlayer->AddComponent<CSpriteRenderer>();
 		sr->Set_Name(L"SR");
 		sr->Image_Load(L"../KatanaZ/CloudOcean.png");
-		CScene::Add_GameObject(m_pPlayer, ecLayerType::Player);
 	#pragma endregion
 	}
 	

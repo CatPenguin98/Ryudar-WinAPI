@@ -17,7 +17,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)CSceneManager.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)RyuMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CTransform.cpp">
       <Filter>Component</Filter>
     </ClCompile>
@@ -29,6 +28,9 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)CResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)RyuMath.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CGameObject.h" />
@@ -47,7 +49,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CSceneManager.h">
       <Filter>Scene</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)RyuMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
       <Filter>Common</Filter>
     </ClInclude>
@@ -65,6 +66,12 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)CResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)RyuMath.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Object.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">

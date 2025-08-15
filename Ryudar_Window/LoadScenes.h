@@ -14,9 +14,9 @@ namespace Ryu
 	{
 		CSceneManager::CreateScene<CPlayScene>(L"PlayScene");
 		CSceneManager::CreateScene<TitleMenu>(L"TitleMenu");
-		CSceneManager::CreateScene<Stage1>(L"Stage1");
-		CSceneManager::CreateScene<Stage2>(L"Stage2");
-		CSceneManager::CreateScene<Stage3>(L"Stage3");
+		//CSceneManager::CreateScene<Stage1>(L"Stage1");
+		//CSceneManager::CreateScene<Stage2>(L"Stage2");
+		//CSceneManager::CreateScene<Stage3>(L"Stage3");
 		//CSceneManager::LoadScene(L"TitleMenu");
 		//CSceneManager::LoadScene(L"Stage1");
 		//CSceneManager::LoadScene(L"Stage2");

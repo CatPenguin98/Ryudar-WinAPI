@@ -23,8 +23,8 @@ namespace Ryu
 		void				Render(HDC hdc)  override;
 	
 	public:
-		void Set_Position(Vector2 _vPos) { m_vPosition = _vPos; }
-		const Vector2 Get_Position() const { return m_vPosition; }
+		void				Set_Position(Vector2 _vPos) { m_vPosition = _vPos; }
+		const Vector2		Get_Position() const { return m_vPosition; }
 
 	private:
 		Vector2 m_vPosition;

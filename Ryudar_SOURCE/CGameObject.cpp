@@ -1,11 +1,11 @@
 #include "CGameObject.h"
-#include "CInputManager.h"
-#include "CTimeManager.h"
+#include "CTransform.h"
 
 namespace Ryu
 {
 	CGameObject::CGameObject()
 	{
+		Init_Transform();
 	}
 
 	CGameObject::~CGameObject()
@@ -55,5 +55,11 @@ namespace Ryu
 		}
 
 		m_Components.clear();
+	}
+
+	void CGameObject::Init_Transform()
+	{
+		CTransform* transform = AddComponent<CTransform>();
+		transform->Set_Name(L"TR");
 	}
 }

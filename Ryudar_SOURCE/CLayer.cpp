@@ -3,8 +3,8 @@
 namespace Ryu
 {
 	CLayer::CLayer()
-		: m_ecType(ecLayerType::None)
-		, m_GameObjects{}
+		: m_GameObjects{}
+		//, m_ecType(ecLayerType::None)
 	{
 
 	}

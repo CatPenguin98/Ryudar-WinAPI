@@ -127,10 +127,10 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    HWND hWnd = CreateWindowW(
        szWindowClass, 
-       szTitle,                 //  윈도우 이름.
+       szTitle,                 //  윈도우 이름.```````````z
        WS_OVERLAPPEDWINDOW,     // 윈도우 스타일. 
        CW_USEDEFAULT, 0,        // 윈도우의 화면상 시작 위치.
-       width, height,        // 윈도우 크기.
+       width, height,           // 윈도우 크기.
        nullptr, 
        nullptr, 
        hInstance, 
@@ -164,6 +164,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //  WM_DESTROY  - 종료 메시지를 게시하고 반환합니다.
 //
 //
+
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)

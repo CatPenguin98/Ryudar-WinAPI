@@ -21,7 +21,7 @@ namespace Ryu
 		void			Add_GameObject(CGameObject* _gameObj);
 
 	private:
-		ecLayerType						m_ecType;
+		//ecLayerType						m_ecType;
 		std::vector<CGameObject*>		m_GameObjects;
 	};
 }

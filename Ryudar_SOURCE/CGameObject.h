@@ -45,6 +45,9 @@ namespace Ryu
 		}
 
 	private:
+		void					Init_Transform();
+
+	private:
 		std::vector<CComponent*> m_Components;
 	};
 }

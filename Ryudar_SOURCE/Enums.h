@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Ryu
+namespace Ryu::enums
 {
 	enum class ecLayerType
 	{

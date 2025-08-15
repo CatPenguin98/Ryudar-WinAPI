@@ -34,9 +34,9 @@ namespace Ryu
 	void CSpriteRenderer::Render(HDC _hdc)
 	{
 		CTransform* tr = Get_Owner()->GetComponent<CTransform>();
-
+		
 		Vector2 pos = tr->Get_Position();
-
+		
 		Gdiplus::Graphics graphics(_hdc);
 		/*윈도우 크기만큼 출력*/
 		graphics.DrawImage(

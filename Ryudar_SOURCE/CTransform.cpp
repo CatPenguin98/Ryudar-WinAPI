@@ -2,6 +2,7 @@
 namespace Ryu
 {
 	CTransform::CTransform()
+		: m_vPosition()
 	{ }
 	
 

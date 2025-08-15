@@ -23,10 +23,14 @@ namespace Ryu
 		virtual void			OnExit();
 
 	public:
-		void					Add_GameObject(CGameObject* _gameObj, const ecLayerType _layerType);
+		void					Add_GameObject(CGameObject* _gameObj, const enums::ecLayerType _layerType);
+
+	public:
+		CLayer*					Get_Layer(const enums::ecLayerType _LayerType) { return m_Layers[(UINT)_LayerType]; }
 
 	private:
 		void					Create_Layers();
+
 	private:
 		std::vector<CLayer*>	m_Layers;
 	};

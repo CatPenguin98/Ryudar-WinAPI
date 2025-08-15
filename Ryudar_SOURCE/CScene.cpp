@@ -5,7 +5,7 @@ namespace Ryu
 	CScene::CScene()
 		:m_Layers{}
 	{
-		m_Layers.reserve((UINT)ecLayerType::Max);
+		m_Layers.reserve((UINT)enums::ecLayerType::Max);
 		Create_Layers();
 	}
 
@@ -71,14 +71,14 @@ namespace Ryu
 
 	}
 
-	void CScene::Add_GameObject(CGameObject* _gameObj, const ecLayerType _layerType)
+	void CScene::Add_GameObject(CGameObject* _gameObj, const enums::ecLayerType _layerType)
 	{
 		m_Layers[UINT(_layerType)]->Add_GameObject(_gameObj);
 	}
 
 	void CScene::Create_Layers()
 	{
-		for (int i = 0; i < (UINT)ecLayerType::Max; ++i)
+		for (int i = 0; i < (UINT)enums::ecLayerType::Max; ++i)
 		{
 			CLayer* layer = new CLayer;
 

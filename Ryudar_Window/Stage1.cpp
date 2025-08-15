@@ -27,7 +27,7 @@ namespace Ryu
 		pSR->Set_Name(L"St1_Bg_SR");
 		pSR->Image_Load(L"../KatanaZ/Texture/Stage1bg.bmp");
 
-		CScene::Add_GameObject(pBG, ecLayerType::BackGround);
+		CScene::Add_GameObject(pBG, enums::ecLayerType::BackGround);
 	#pragma endregion
 
 	}
