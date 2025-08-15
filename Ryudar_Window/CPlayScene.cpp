@@ -8,7 +8,7 @@
 #include "CInputManager.h"
 #include "Stage1.h"
 #include "CSceneManager.h"
-
+/*test*/
 namespace Ryu
 {
 	CPlayScene::CPlayScene()
@@ -32,7 +32,7 @@ namespace Ryu
 		
 		CSpriteRenderer* sr = m_pPlayer->AddComponent<CSpriteRenderer>();
 		sr->Set_Name(L"SR");
-		sr->Image_Load(L"C:\\Users\\Jo_\\source\\repos\\Ryudar-WinAPI\\Ryudar_Window\\CloudOcean.png");
+		sr->Image_Load(L"../KatanaZ/CloudOcean.png");
 		CScene::Add_GameObject(m_pPlayer, ecLayerType::Player);
 	#pragma endregion
 	}
