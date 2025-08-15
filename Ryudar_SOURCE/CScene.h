@@ -2,6 +2,7 @@
 
 #include "CEntity.h"
 #include "CGameObject.h"
+#include "CLayer.h"
 
 namespace Ryu
 {
@@ -16,12 +17,18 @@ namespace Ryu
 		virtual void			Update();
 		virtual void			LateUpdate();
 		virtual void			Render(HDC _hdc);
+		 
+	public:
+		virtual void			OnEnter();
+		virtual void			OnExit();
 
 	public:
-		void					Add_GameObject(CGameObject* _gameObj);
+		void					Add_GameObject(CGameObject* _gameObj, const ecLayerType _layerType);
 
 	private:
-		std::vector<CGameObject*>		m_GameObjects;
+		void					Create_Layers();
+	private:
+		std::vector<CLayer*>	m_Layers;
 	};
 }
 

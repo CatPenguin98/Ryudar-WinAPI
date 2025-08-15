@@ -20,6 +20,11 @@ namespace Ryu
 		}
 		static CScene*		LoadScene(const std::wstring& _name)
 		{
+			if(m_pActiveScene)
+			{
+				m_pActiveScene->OnExit();
+			}
+
 			std::map<std::wstring, CScene*>::iterator sceneIter = 
 				m_Scenes.find(_name);
 		
@@ -29,7 +34,8 @@ namespace Ryu
 			}
 			
 			m_pActiveScene = sceneIter->second;
-		
+			m_pActiveScene->OnEnter();
+
 			return sceneIter->second;
 		}
 

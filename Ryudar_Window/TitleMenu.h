@@ -1,26 +1,20 @@
 #pragma once
+
 #include "../Ryudar_SOURCE/CScene.h"
 
 namespace Ryu
 {
-	class CPlayScene : public CScene
+	class TitleMenu : public CScene
 	{
 	public:
-		CPlayScene();
-		virtual ~CPlayScene();
-	
+		TitleMenu();
+		~TitleMenu();
+
 	public:
 		void			Initialize() override;
 		void			Update() override;
 		void			LateUpdate() override;
 		void			Render(HDC _hdc) override;
-
-	public:
-		void			OnEnter() override;
-		void			OnExit() override;
-	
-	private:
-		class CPlayer* m_pPlayer;
 	};
 }
 

@@ -30,6 +30,9 @@
     <ClInclude Include="Stage3.h">
       <Filter>Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="TitleMenu.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CPlayer.cpp">
@@ -48,6 +51,9 @@
       <Filter>Scenes</Filter>
     </ClCompile>
     <ClCompile Include="Stage3.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleMenu.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
   </ItemGroup>
