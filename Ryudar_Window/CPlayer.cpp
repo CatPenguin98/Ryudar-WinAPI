@@ -33,6 +33,7 @@ namespace Ryu
 			Vector2 pos = tr->Get_Position();
 			pos.x += 100.0f * CTimeManager::Get_DeltaTime();
 			tr->Set_Position(pos);
+			//Test
 		}
 	}
 	
