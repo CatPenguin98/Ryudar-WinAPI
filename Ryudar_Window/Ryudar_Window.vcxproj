@@ -136,6 +136,7 @@
     <ClInclude Include="CPlayer.h" />
     <ClInclude Include="CPlayScene.h" />
     <ClInclude Include="LoadScenes.h" />
+    <ClInclude Include="LoadResources.h" />
     <ClInclude Include="Stage1.h" />
     <ClInclude Include="Stage2.h" />
     <ClInclude Include="Stage3.h" />

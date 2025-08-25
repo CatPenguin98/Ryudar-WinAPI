@@ -2,9 +2,10 @@
 
 namespace Ryu
 {
-	CLayer::CLayer()
-		: m_GameObjects{}
-		//, m_ecType(ecLayerType::None)
+	CLayer::CLayer(enums::ecLayerType _layerType)
+		: CEntity()
+		, m_GameObjects{}
+		, m_ecType(_layerType)
 	{
 
 	}

@@ -3,7 +3,8 @@
 namespace Ryu
 {
 	CScene::CScene()
-		:m_Layers{}
+		: CEntity()
+		, m_Layers{}
 	{
 		m_Layers.reserve((UINT)enums::ecLayerType::Max);
 		Create_Layers();
@@ -80,8 +81,8 @@ namespace Ryu
 	{
 		for (int i = 0; i < (UINT)enums::ecLayerType::Max; ++i)
 		{
-			CLayer* layer = new CLayer;
-
+			CLayer* layer = new CLayer((enums::ecLayerType)i);
+			
 			m_Layers.push_back(layer);
 			
 		}

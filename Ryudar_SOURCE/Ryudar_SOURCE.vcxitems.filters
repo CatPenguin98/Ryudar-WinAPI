@@ -26,10 +26,17 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)CLayer.cpp">
       <Filter>Layer</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)CResource.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)CResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)RyuMath.cpp">
       <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CResources.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CTexture.cpp">
+      <Filter>Resource\Texture</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -64,13 +71,20 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Enums.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)CResource.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)CResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)RyuMath.h">
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Object.h">
       <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CResources.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CTexture.h">
+      <Filter>Resource\Texture</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +99,12 @@
     </Filter>
     <Filter Include="Layer">
       <UniqueIdentifier>{31ecb9a6-e507-4163-8a7f-63e6286e71d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{75d151a8-25b1-4260-b381-7867ed6aece2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Texture">
+      <UniqueIdentifier>{b65b8658-c14d-480c-9d1b-4f51fcee96a2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

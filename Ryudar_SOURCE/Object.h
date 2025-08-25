@@ -14,7 +14,7 @@ namespace Ryu::object
 	{
 		T* gameObj = new T;
 		CScene* activeScene = CSceneManager::Get_ActiveScene();
-		CLayer* layer = CScene::Get_Layer(_LayerType);
+		CLayer* layer = activeScene->Get_Layer(_LayerType);
 		layer->Add_GameObject(gameObj);
 
 		return gameObj;

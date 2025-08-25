@@ -33,6 +33,7 @@
     <ClInclude Include="TitleMenu.h">
       <Filter>Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="LoadResources.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CPlayer.cpp">

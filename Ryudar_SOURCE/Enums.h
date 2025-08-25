@@ -8,6 +8,14 @@ namespace Ryu::enums
 		BackGround,
 		Character,
 		Player,
-		Max = 16
+		Max
+	};
+
+	enum class ecResourceType
+	{
+		Texture,
+		AudioClip,
+		Prefab,
+		End
 	};
 }

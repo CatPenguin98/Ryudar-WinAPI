@@ -2,6 +2,8 @@
 #include "CBackGround.h"
 #include "CTransform.h"
 #include "CSpriteRenderer.h"
+#include "Object.h"
+#include "CResources.h"
 
 namespace Ryu
 {
@@ -14,17 +16,15 @@ namespace Ryu
 	void Stage2::Initialize()
 	{
 	#pragma region 배경생성
-		CBackGround* pBG = new CBackGround;
-		
-		CTransform* pTR = pBG->AddComponent<CTransform>();
-		pTR->Set_Name(L"St2_Bg_TR");
-		pTR->Set_Position(Vector2(0.f, 0.f));
+		CBackGround* pBG =
+			object::Instantiate<CBackGround>(enums::ecLayerType::BackGround);
 
 		CSpriteRenderer* pSR = pBG->AddComponent<CSpriteRenderer>();
-		pSR->Set_Name(L"St2_Bg_SR");
-		pSR->Image_Load(L"../KatanaZ/Texture/Stage2bg.bmp");
-		
-		Add_GameObject(pBG, enums::ecLayerType::BackGround);
+		pSR->Set_Name(L"SR_Stage2_BG");
+		graphics::CTexture* pBGTexture =
+			CResources::Find<graphics::CTexture>(L"Texture_Stage2_BG");
+		pBGTexture->Set_Name(L"Texture_Stage2_BG");
+		pSR->Set_Texture(pBGTexture);
 	#pragma endregion
 
 	}

@@ -7,8 +7,9 @@ namespace Ryu
 {
 	class CLayer : public CEntity
 	{
+		CLayer() = delete;
 	public:
-		CLayer(); 
+		CLayer(enums::ecLayerType _layerType); 
 		~CLayer();
 
 	public:
@@ -21,8 +22,8 @@ namespace Ryu
 		void			Add_GameObject(CGameObject* _gameObj);
 
 	private:
-		//ecLayerType						m_ecType;
-		std::vector<CGameObject*>		m_GameObjects;
+		enums::ecLayerType					m_ecType;
+		std::vector<CGameObject*>			m_GameObjects;
 	};
 }
 

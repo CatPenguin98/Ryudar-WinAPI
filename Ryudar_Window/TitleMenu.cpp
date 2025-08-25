@@ -2,6 +2,8 @@
 #include "CBackGround.h"
 #include "CTransform.h"
 #include "CSpriteRenderer.h"
+#include "Object.h"
+#include "CResources.h"
 
 /*씬전환 테스트*/
 #include "CInputManager.h"
@@ -21,17 +23,14 @@ namespace Ryu
 	void TitleMenu::Initialize()
 	{
 	#pragma region 배경생성
-		CBackGround* pBG = new CBackGround;
+		CBackGround* pBG = 
+			object::Instantiate<CBackGround>(enums::ecLayerType::BackGround);
 
-		CTransform* pTR = pBG->AddComponent<CTransform>();
-		pTR->Set_Name(L"Title_Bg_TR");
-		pTR->Set_Position(Vector2(0.f, 0.f));
-
-		CSpriteRenderer* pSR = pBG->AddComponent<CSpriteRenderer>();
-		pSR->Set_Name(L"Title_Bg_SR");
-		pSR->Image_Load(L"../KatanaZ/Texture/Title/spr_title_background.png");
-
-		CScene::Add_GameObject(pBG, enums::ecLayerType::BackGround);
+		CSpriteRenderer* pBGSR = pBG->AddComponent<CSpriteRenderer>();
+		pBGSR->Set_Name(L"SR_Title_Bg");
+		graphics::CTexture* pBGTexture =
+			CResources::Find<graphics::CTexture>(L"Texture_Title_BG");
+		pBGSR->Set_Texture(pBGTexture);
 	#pragma endregion
 	}
 

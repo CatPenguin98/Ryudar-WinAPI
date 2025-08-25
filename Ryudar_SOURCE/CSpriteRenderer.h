@@ -2,6 +2,7 @@
 
 #include "CEntity.h"
 #include "CComponent.h"
+#include "CTexture.h"
 
 namespace Ryu
 {
@@ -18,12 +19,11 @@ namespace Ryu
 		void		Render(HDC _hdc) override;
 
 	public:
-		void		Image_Load(const std::wstring& path);
-
+		void		Set_Texture(graphics::CTexture* _pTexture) { m_pTexture = _pTexture; }
+		void		Set_Size(const math::Vector2& _size) { m_Size = _size; }
 	private:
-		Gdiplus::Image*		m_pImage;
-		UINT				m_iWidth;
-		UINT				m_iHeight;
+		graphics::CTexture* m_pTexture;
+		math::Vector2				m_Size;
 	};
 }
 

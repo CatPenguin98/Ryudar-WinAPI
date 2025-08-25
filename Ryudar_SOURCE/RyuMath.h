@@ -5,6 +5,9 @@ namespace Ryu::math
 {
 	struct Vector2
 	{
+		static const Vector2 One;
+		static const Vector2 Zero;
+
 		float x;
 		float y;
 

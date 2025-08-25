@@ -2,7 +2,8 @@
 namespace Ryu
 {
 	CTransform::CTransform()
-		: m_vPosition()
+		: CComponent()
+		, m_vPosition()
 	{ }
 	
 

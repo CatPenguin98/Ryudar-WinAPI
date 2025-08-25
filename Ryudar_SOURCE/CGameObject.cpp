@@ -59,7 +59,7 @@ namespace Ryu
 
 	void CGameObject::Init_Transform()
 	{
-		CTransform* transform = AddComponent<CTransform>();
+		CTransform* transform = CGameObject::AddComponent<CTransform>();
 		transform->Set_Name(L"TR");
 	}
 }

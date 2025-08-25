@@ -3,6 +3,8 @@
 #include "CTransform.h"
 #include "CSpriteRenderer.h"
 #include "Object.h"
+#include "CTexture.h"
+#include "CResources.h"
 
 /*씬전환 테스트*/
 #include "CInputManager.h"
@@ -30,7 +32,11 @@ namespace Ryu
 
 		CSpriteRenderer* sr = m_pPlayer->AddComponent<CSpriteRenderer>();
 		sr->Set_Name(L"SR");
-		sr->Image_Load(L"../KatanaZ/CloudOcean.png");
+		graphics::CTexture* pTexture = CResources::Find<graphics::CTexture>(L"Texture_PlayScene_BG");
+		sr->Set_Texture(pTexture);
+
+		
+		//sr->Image_Load(L"../KatanaZ/CloudOcean.png");
 	#pragma endregion
 	}
 	

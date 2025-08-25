@@ -6,6 +6,7 @@
 namespace Ryu
 {
 	CPlayer::CPlayer()
+		: CGameObject()
 	{
 	}
 

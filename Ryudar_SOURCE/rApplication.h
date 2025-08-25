@@ -18,6 +18,9 @@ namespace Ryu{
 		void			LateUpdate();
 		void			Render();
 
+	public:
+		const HDC		Get_HDC() const { return m_Hdc; }
+
 	private:
 		void			Clear_RenderTarget();
 		void			Copy_RenderTarget(HDC _dest, HDC _source);
